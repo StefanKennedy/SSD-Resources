@@ -1,0 +1,16 @@
+
+<a class="btn btn-default" ng-click="location.url('/')">« Return</a>
+
+<br>
+
+<pre style="float:left;margin-top:20px;">
+<code style="font-family:monospace">SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LocalTest.mdf;");
+	
+SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM dbo.[Table]", sqlConnection);
+
+sqlConnection.Open();
+int count = (int)sqlCommand.ExecuteScalar();
+sqlConnection.Close();
+
+CountLabel.Text = "There are: " + count + " Lines";</code>
+</pre>

@@ -1,0 +1,11 @@
+<div class="jumbotron">
+	<h1>List of Resources</h1>
+	<p>Small blocks of code that quickly show you how to add features to your application</p>
+</div>
+<div class="row">
+	<div class="col-xs-6 col-lg-4" ng-repeat="x in pageLinks track by $index">
+		<h2>{{x.heading}}</h2>
+		<p>{{x.description}}</p>
+		<p><a class="btn btn-default" href="#{{x.link}}" role="button">View details &raquo;</a></p>
+	</div><!--/.col-xs-6.col-lg-4-->
+</div><!--/row-->
