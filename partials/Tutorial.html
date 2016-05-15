@@ -1,6 +1,20 @@
 
 <a class="btn btn-default" ng-click="location.url('/')">« Return</a>
 
+<h1>Connecting to the Database</h1>
+
+<div style="margin-top:20px;margin-bottom:10px;">
+	To connect to a database:
+	<br>
+	<ul style="margin-top:10px">
+		<li><b>SqlConnection: </b>This specifies what database you want to connect to</li>
+		<li><b>SqlCommand: </b>This specifies the SQL query you want to run on the database</li>
+		<li><b>ExecuteScalar(): </b> This is used to get a number when we execute a SqlCommand</li>
+	</ul>
+</div>
+
+In this example we are selecting the number of rows (count) in a table and updating the CountLabel to display this
+
 <br>
 
 <pre style="float:left;margin-top:20px;">
@@ -8,9 +22,13 @@
 	
 SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM dbo.[Table]", sqlConnection);
 
-sqlConnection.Open();
+sqlConnection.Open(); // We need to open the connection before we can run anything
 int count = (int)sqlCommand.ExecuteScalar();
 sqlConnection.Close();
 
 CountLabel.Text = "There are: " + count + " Lines";</code>
 </pre>
+
+<div style = "margin-top:10px;float:left;">
+	You can find the string for the SqlConnection object by going to the App.config file in your project
+</div>
