@@ -1,0 +1,30 @@
+<h1><input placeholder="Heading" style="width:100%;" [(ngModel)]="heading"/></h1>
+<div style="margin-top:20px;margin-bottom:10px;">
+	To do this we will need:
+	<br>
+	
+	<ul style="margin-top:10px;width:100%">
+			<li *ngFor="let x of explains let i = index">
+				<div class="pull-left"><input placeholder = "Code" value="{{x.code}}" [(ngModel)] = "explains[i].code" (ngModelChange)="listUpdated(i);" (focus)="listFocus(i);" (blur)="listLostFocus(i);"/> <b>:</b></div> <div style="overflow:auto;padding-left:4px;"><input placeholder="Description" style="width:100%" value="{{x.explain}}" [(ngModel)] = "explains[i].explain" (ngModelChange)="listUpdated(i);" (focus)="listFocus(i);" (blur)="listLostFocus(i);"/>
+				</div>
+			</li>
+	</ul>
+</div>
+
+<input placeholder="Example Description Here" style="width:100%;" [(ngModel)]="exampleDescription"/>
+
+<br>
+
+<pre style="float:left;margin-top:20px;width:100%;">
+<code style="font-family:monospace;"><textarea style="width:100%;" placeholder="Example here" [(ngModel)]="example"></textarea></code>
+</pre>
+
+<div style = "margin-top:10px;float:left;width:100%;">
+	<input placeholder="Extra" style="width:100%;" [(ngModel)]="extra"/>
+</div>
+
+<a class="btn btn-default" (click)="generateClicked();" style = "margin-top:20px">Generate</a>
+
+<pre id = "resultPre" style="float:left;margin-top:20px;width:100%;" (click) = "resultClicked();">
+{{result}}
+</pre>

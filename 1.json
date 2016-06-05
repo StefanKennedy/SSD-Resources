@@ -1,1 +1,14 @@
-{"heading": "Connecting to the Database"}
+{"heading": "Connecting to the Database", 
+
+"explains":{
+	"SqlConnection":"This specifies what database you want to connect to",
+	"SqlCommand":"This specifies the SQL query you want to run on the database",
+	"ExecuteScalar()":"This is used to get a number when we execute a SqlCommand"
+}, 
+
+"exampleDescription":"In this example we are selecting the number of rows (count) in a table and updating the CountLabel to display this", 
+
+"example":"SqlConnection sqlConnection = new SqlConnection(@\"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\LocalTest.mdf;\"); // NOTE: You will need to change this line, see below\n\nSqlCommand sqlCommand = new SqlCommand(\"SELECT COUNT(*) FROM dbo.[Table]\", sqlConnection);\n\nsqlConnection.Open(); // We need to open the connection before we can run anything\nint count = (int)sqlCommand.ExecuteScalar();\nsqlConnection.Close();\n\nCountLabel.Text = \"There are: \" + count + \" Lines\";\"",
+
+"extra":"You can find the string for the SqlConnection object by going to the App.config file in your project"
+}
