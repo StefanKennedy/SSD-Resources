@@ -41,7 +41,22 @@
 		{
 			"heading":"Auto-Incrementing in SQL",
 			"description":"Shows how create an auto-incrementing column in a SQL table",
-			"link":"7"
+			"link":"8"
+		},
+		{
+			"heading":"Creating Foreign Keys in SQL",
+			"description":"Shows how create a column that links to a primary key in another table",
+			"link":"9"
+		},
+		{
+			"heading":"Protecting against SQL injection",
+			"description":"Shows how execute queries that are protected against SQL injection",
+			"link":"10"
+		},
+		{
+			"heading":"Performing JOINs in SQL",
+			"description":"Shows how to create queries that JOIN tables",
+			"link":"11"
 		}
 
 	]

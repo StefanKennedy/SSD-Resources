@@ -1,7 +1,7 @@
 <a class="btn btn-default" (click)="returnClicked();">« Return</a>
 
 <h1>{{heading}}</h1>
-<div style="margin-top:20px;margin-bottom:10px;">
+<div style="margin-top:20px;margin-bottom:10px;" *ngIf="explains.length > 0">
 	To do this we will need:
 	<br>
 	
@@ -12,14 +12,12 @@
 	</ul>
 </div>
 
-{{exampleDescription}}
+<a style="color:#333;text-decoration:none;" [innerHTML]="exampleDescription"></a>
 
 <br>
 
-<pre style="float:left;margin-top:20px;">
+<pre style="float:left;margin-top:20px;width:100%;">
 <code style="font-family:monospace">{{example}}</code>
 </pre>
 
-<div style = "margin-top:10px;float:left;">
-	{{extra}}
-</div>
+<div style = "margin-top:10px;float:left;" [innerHTML] = "extra"></div>
