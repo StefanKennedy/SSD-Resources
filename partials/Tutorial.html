@@ -1,7 +1,8 @@
 <a class="btn btn-default" (click)="returnClicked();">« Return</a>
 
 <h1>{{heading}}</h1>
-<div style="margin-top:20px;margin-bottom:10px;" *ngIf="explains.length > 0">
+
+<div style="margin-top:20px;margin-bottom:10px;" *ngIf="numKeys(explains).length > 0">
 	To do this we will need:
 	<br>
 	
