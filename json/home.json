@@ -4,8 +4,13 @@
 	[
 
 		{
-			"heading":"Connecting to the Database",
+			"heading":"Creating a Database",
 			"description":"Shows how to create a database local to your project.",
+			"link":"12"
+		},
+		{
+			"heading":"Connecting to the Database",
+			"description":"Shows how to connect to a local in your project.",
 			"link":"1"
 		},
 		{
@@ -57,6 +62,21 @@
 			"heading":"Performing JOINs in SQL",
 			"description":"Shows how to create queries that JOIN tables",
 			"link":"11"
+		},
+		{
+			"heading":"Validating Input",
+			"description":"Shows how to validate a user's input",
+			"link":"13"
+		},
+		{
+			"heading":"Validating Input (Advanced)",
+			"description":"Shows how to validate a user's input using a static Validator class",
+			"link":"14"
+		},
+		{
+			"heading":"Creating Custom User Controls",
+			"description":"Shows how to Create a custom TextBox that shows a hint/placeholder",
+			"link":"15"
 		}
 
 	]
