@@ -29,6 +29,10 @@ export class TutorialComponent {
 	constructor(public http : Http, private router : Router){
 		this.http = http;
 		this.router = router;
+		
+		this.numKeys = function(obj){
+			return Object.keys(obj);
+		}
 	}	
 	
 	routerOnActivate(curr: RouteSegment): void{
@@ -50,7 +54,7 @@ export class TutorialComponent {
 			outerThis.extra = res.extra;
 		}
 		
-		this.http.get('./' + curr.getParam('id') + '.json').map((res: Response) => res.json()).subscribe(extractData);
+		this.http.get('./json/' + curr.getParam('id') + '.json').map((res: Response) => res.json()).subscribe(extractData);
 		
 		
 		/*.success(function(data){

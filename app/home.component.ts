@@ -32,7 +32,7 @@ export class HomeComponent {
 			outerThis.pageLinks = res.links;
 		}
 		
-		this.http.get('./home.json').map((res: Response) => res.json()).subscribe(extractData);
+		this.http.get('./json/home.json').map((res: Response) => res.json()).subscribe(extractData);
 	}
 
 }
