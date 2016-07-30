@@ -1,5 +1,5 @@
 import { Component }     from '@angular/core';
-import {NgFor} from '@angular/common'
+import { NgFor } from '@angular/common'
 import { CanDeactivate, OnActivate, Router, RouteSegment } from '@angular/router';
 import { Http, HTTP_PROVIDERS} from '@angular/http';
 import { Pipe, PipeTransform} from '@angular/core';
@@ -35,9 +35,13 @@ export class TutorialComponent {
 		}
 	}	
 	
+	editClicked(): void{
+		this.router.navigate(['/Edit/' + this.parameter]);
+	}
+	
 	routerOnActivate(curr: RouteSegment): void{
 		
-		console.log(curr.getParam('id') + ".json");
+		this.parameter = curr.getParam('id');
 		this.explains = {};
 		
 		var outerThis = this;

@@ -20,10 +20,31 @@ export class AddComponent {
 	
 	routerOnActivate(curr: RouteSegment): void{
 		
-		this.explains = [{"code":"someCode", "explain":"does cool"}, {"code":"", "explain":""}];
-		this.focusedRow = -1;
+		var urlTokens = curr.stringifiedUrlSegments.split("/");
 		
 		var outerThis = this;
+		
+		if(urlTokens[0] == "Edit"){
+			var fillFields = function(res: Response){
+				console.log(JSON.stringify(Object.keys(res.explains)));
+				outerThis.heading = res.heading;
+				var list = [];
+				var keys = Object.keys(res.explains);
+				for(var k in keys){
+					list.push({"code":keys[k], "explain":res.explains[keys[k]]});
+				}
+				outerThis.explains = list;
+				outerThis.exampleDescription = res.exampleDescription;
+				outerThis.example = res.example;
+				outerThis.extra = res.extra;
+			}
+			
+			this.http.get('./json/' + curr.getParam('id') + '.json').map((res: Response) => res.json()).subscribe(fillFields);
+		}else{
+			this.explains = [{"code":"", "explain":""}];
+		}
+		this.focusedRow = -1;
+		
 		
 		this.generateClicked = function(){
 			var jsonObject = {};
