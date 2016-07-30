@@ -1,0 +1,4 @@
+{"heading": "Data source does not reflect my Database", 
+
+"content":"If you have made a change to your database in the 'Server Explorer', but this is not reflected under 'Data Sources' then you'll need to re-configure the data source to make the changes show up. <br><br> Under the Data Sources tab, right click on your data source, and click 'Configure Data Source with Wizard...' You may need to click on the Solution Explorer first for anything to show up <br><br> Click through the wizard until it asks you to Choose Your Database Objects, and select all of the objects you want to include: <br><br> <img src=\"images/Help/Configure1.png\"> <br><br> Then click finish and your changes will be reflected in the data source"
+}
