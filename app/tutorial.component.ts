@@ -36,7 +36,7 @@ export class TutorialComponent {
 	}	
 	
 	editClicked(): void{
-		this.router.navigate(['/Edit/' + this.parameter]);
+		this.router.navigate(['/#/Edit/' + this.parameter]);
 	}
 	
 	routerOnActivate(curr: RouteSegment): void{
@@ -47,7 +47,7 @@ export class TutorialComponent {
 		var outerThis = this;
 		
 		this.returnClicked = function(){
-			outerThis.router.navigate(['/Home']);
+			outerThis.router.navigate(['/#/Home']);
 		}
 		
 		var extractData = function(res: Response) {

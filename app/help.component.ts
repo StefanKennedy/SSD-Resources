@@ -23,7 +23,7 @@ export class HelpComponent {
 		var outerThis = this;
 		
 		this.returnClicked = function(){
-			outerThis.router.navigate(['/Home']);
+			outerThis.router.navigate(['/#/Home']);
 		}
 		
 		var extractData = function(res: Response) {
