@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CanDeactivate, OnActivate, Router, RouteSegment } from '@angular/router';
 import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { Http, HTTP_PROVIDERS} from '@angular/http';
@@ -24,18 +24,19 @@ import 'rxjs/add/operator/map';
 })
 
 @Routes([
-	{path:'/Tutorial/:id', component: TutorialComponent},
-	{path:'/Home', component: HomeComponent},
-	{path:'/Add', component: AddComponent},
-	{path:'/Edit/:id', component: AddComponent},
-	{path:'/Help/:id', component: HelpComponent}
+	{path:'/#/Tutorial/:id', component: TutorialComponent},
+	{path:'/', component: HomeComponent},
+	{path:'/#/Home', component: HomeComponent},
+	{path:'/#/Add', component: AddComponent},
+	{path:'/#/Edit/:id', component: AddComponent},
+	{path:'/#/Help/:id', component: HelpComponent}
 ])
 
 export class AppComponent implements OnInit {
   constructor(public http: Http, private router: Router) {}
 
   ngOnInit() {
-    this.router.navigate(['/Home']);
+    this.router.navigate(['#/Home']);
 	
 	var outerThis = this;
 	
