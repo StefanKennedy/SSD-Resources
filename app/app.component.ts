@@ -24,18 +24,19 @@ import 'rxjs/add/operator/map';
 })
 
 @Routes([
-	{path:'/Tutorial/:id', component: TutorialComponent},
-	{path:'/Home', component: HomeComponent},
-	{path:'/Add', component: AddComponent},
-	{path:'/Edit/:id', component: AddComponent},
-	{path:'/Help/:id', component: HelpComponent}
+	{path:'/#/Tutorial/:id', component: TutorialComponent},
+	{path:'/', component: HomeComponent},
+	{path:'/#/Home', component: HomeComponent},
+	{path:'/#/Add', component: AddComponent},
+	{path:'/#/Edit/:id', component: AddComponent},
+	{path:'/#/Help/:id', component: HelpComponent}
 ])
 
 export class AppComponent implements OnInit {
   constructor(public http: Http, private router: Router) {}
 
   ngOnInit() {
-    this.router.navigate(['/Home']);
+    this.router.navigate(['#/Home']);
 	
 	var outerThis = this;
 	

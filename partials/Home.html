@@ -6,6 +6,6 @@
 	<div class="col-xs-6 col-lg-4" *ngFor="let x of pageLinks;">
 		<h2>{{x.heading}}</h2>
 		<p>{{x.description}}</p>
-		<p><a class="btn btn-default" (click)="linkChosen('Tutorial/' + x.link);" role="button">View details &raquo;</a></p>
+		<p><a class="btn btn-default" (click)="linkChosen('#/Tutorial/' + x.link);" role="button">View details &raquo;</a></p>
 	</div><!--/.col-xs-6.col-lg-4-->
 </div><!--/row-->
