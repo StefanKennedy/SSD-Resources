@@ -77,6 +77,11 @@
 			"heading":"Creating Custom User Controls",
 			"description":"Shows how to Create a custom TextBox that shows a hint/placeholder",
 			"link":"15"
+		},
+		{
+			"heading":"Creating Forms for a Table",
+			"description":"Shows the idea behind creating a form to insert data into a table",
+			"link":"16"
 		}
 
 	]
