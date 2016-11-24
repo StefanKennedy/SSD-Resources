@@ -82,6 +82,11 @@
 			"heading":"Creating Forms for a Table",
 			"description":"Shows the idea behind creating a form to insert data into a table",
 			"link":"16"
+		},
+		{
+			"heading":"Creating a Report for a Table",
+			"description":"Shows the idea behind creating a report to show the data in a table",
+			"link":"17"
 		}
 
 	]
