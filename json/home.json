@@ -87,6 +87,11 @@
 			"heading":"Creating a Report for a Table",
 			"description":"Shows the idea behind creating a report to show the data in a table",
 			"link":"17"
+		},
+		{
+			"heading":"Timetabling (Work in progress)",
+			"description":"Explains how timetabling systems can be set up, using timeslots",
+			"link":"18"
 		}
 
 	]
