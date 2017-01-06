@@ -92,6 +92,11 @@
 			"heading":"Timetabling",
 			"description":"Explains how timetabling systems can be set up, using timeslots",
 			"link":"18"
+		},
+		{
+			"heading":"Timetabling (Continued)",
+			"description":"Explains how timetabling systems can be set up over many-to-many relationships",
+			"link":"19"
 		}
 
 	]
